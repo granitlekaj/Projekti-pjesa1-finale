@@ -1,3 +1,4 @@
+<?php include_once 'controller/registerController.php' ?>
 <html>
     <head>
         <title>Log In</title>
@@ -20,7 +21,7 @@
         </header>
         <div class="login-form">
             <h1>Sign Up</h1>
-            <form >
+            <form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>" >
                 <p>Email</p> 
             <input type="text" name="email" id="email" placeholder="Email"> <br>
               <label id="emailMsg" style="color: red; margin-left: 16%;"></label>
@@ -31,17 +32,18 @@
               <input type="password" id="password" name="password" placeholder="Password"> <br>
               <label id="passwordMsg" style="color: red; margin-left: 16%;"></label> <br>
               <p>Re-write Password</p>
-              <input type="password" id="password2" name="password2" placeholder="Re-write Password"> <br>
+              <input type="password" id="password2" name="reWritePassword" placeholder="Re-write Password"> <br>
               <label id="password2Msg" style="color: red; margin-left: 16%;"></label> <br>
               <p>Phone Number</p>
-              <input type="tel" id="phoneNumber" name="" placeholder="Phone Number"> <br>
+              <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number"> <br>
               <label id="phoneNumberMsg" style="color: red; margin-left: 16%;"></label> <br>
               
-            </form>
-            <div class="loginRegister">
-                <button type="submit" style="background-color: black; color: white;" id="signUpButton">Sign Up</button>
+              <div class="loginRegister">
+                <button type="submit" style="background-color: black; color: white;" name="registerBtn" id="signUpButton">Sign Up</button>
                 <button type="submit"  onclick="window.location='http://localhost/ProjektiWebFinale/login.php'">Log In</button>
                 </div>
+            </form>
+            
         </div>
         <script src="signUp.js"></script>
     </body>
